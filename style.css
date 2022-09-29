@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    
+}
+
+.home-container{
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    /* z-index: 1; */
+    
+    background:  linear-gradient(rgba(185, 126, 126, 0.39),rgba(0,0,0,0.2)),url(./img/lillard\ home.jpeg) no-repeat center center/cover;
+
+    
+    transform: scale(1);
+    transition: width 0.6s ease, transform 0.8s ease-out 0.2s;
+}
+
+
+/* transitions for the home texts and button */
+.home{
+    transition: margin-left 0.5s;
+
+}
+.home.active{
+    margin-left: -10rem;
+    transition: margin-left 0.5s;
+}
+
+/* active/hover clas for the home container */
+.home-container.hover{
+    width: 70vw;
+    transition: width 0.6s ease, transform 0.8s ease-in 0.2s;
+    transform: scale(1.1);
+
+}
+
+/* for the home button */
+.btn{
+    margin-top: -2rem;
+    background: rgba(41, 49, 49, 0.568);
+    color: rgb(255, 255, 255);
+    height: 2rem;
+    width: 7.2rem;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+
+.away-container{
+
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    padding-top: 1rem;
+    background:  linear-gradient(rgba(212, 219, 209, 0.6),rgba(255, 9, 9, 0.37)), url(./img/lillard\ away.jpg) no-repeat center center/cover;
+    
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+    
+
+}
+.away{
+    margin-left: -10rem;
+    transition: margin-left 0.5s;
+}
+
+/* transitions for away text and button when hovering the home container */
+.away.active{
+    margin-left: -21rem;
+    transition: margin-left 0.5s;
+
+}
+.btn-away.actives{
+    margin-left: -21rem;
+    transition: margin-left 0.5s;
+}
+
+
+/* transitions for away container when hover calss is added*/
+.away-container.hover{
+    /* z-index: 1; */
+    transform: translateX(-12rem);
+    transition: transform 0.6s ease;
+}
+
+
+
+
+.btn-away{
+    margin-left: -10rem;
+    margin-top: -2rem;
+    background: rgba(41, 49, 49, 0.568);
+    color: rgb(255, 255, 255);
+    height: 2rem;
+    width: 7.2rem;
+    border-color: #fff;
+    cursor: pointer;
+    transition: margin-left 0.5s;
+
+}
+
+.btn:hover{
+    background-color: rgb(196, 170, 169);
+    color: black;
+}
+
+
+h1{
+    font-size: 20px;
+    margin-top: -4.5rem;
+    color: #fff;
+    background: rgba(41, 49, 49, 0.568);
+    width: 7rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
